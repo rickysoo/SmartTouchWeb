@@ -2,6 +2,7 @@
   "name": "smarttouch-website",
   "version": "1.0.0",
   "description": "Smart Touch Technology - Modern HR & Payroll Solutions Website",
+  "homepage": "https://rickysoo.github.io/SmartTouchWeb/",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
