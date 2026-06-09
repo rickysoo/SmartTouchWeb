@@ -1,0 +1,127 @@
+.navbar {
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.navbar-logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #1a3a52;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+.logo-sub {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #e85d2a;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: #1a3a52;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.nav-link:hover {
+    color: #e85d2a;
+}
+
+.nav-cta {
+    background: #e85d2a;
+    color: white !important;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.nav-cta:hover {
+    background: #d04a1f;
+    color: white !important;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1a3a52;
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        height: 60px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-menu.active {
+        max-height: 400px;
+    }
+
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-link {
+        padding: 15px 20px;
+        width: 100%;
+    }
+
+    .nav-cta {
+        background: #e85d2a;
+        margin: 10px 20px;
+        width: calc(100% - 40px);
+        text-align: center;
+    }
+}

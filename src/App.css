@@ -1,0 +1,194 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* Spacing utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 60px 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #1a3a52;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background: #20ba5c;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid layouts */
+.grid {
+    display: grid;
+    gap: 30px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (min-width: 768px) {
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a3a52;
+    margin-bottom: 15px;
+}
+
+.card-description {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.card-list {
+    list-style: none;
+}
+
+.card-list li {
+    padding: 8px 0;
+    color: #555;
+    padding-left: 25px;
+    position: relative;
+}
+
+.card-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #e85d2a;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: #e85d2a;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #d04a1f;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #1a3a52;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #0f2335;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #1a3a52;
+    border: 2px solid #1a3a52;
+}
+
+.btn-outline:hover {
+    background: #1a3a52;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .section {
+        padding: 40px 20px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .grid-3,
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
